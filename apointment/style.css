@@ -1,0 +1,91 @@
+@import url(fonts/raleway.chs);
+body{
+	font-family: raleway;
+	font-size: 25px;
+	background-image:url("images/bg.jpg"); 
+	background-repeat: no-repeat; 
+}
+.block,.innerblock,.heading
+{
+margin:10px;
+width:70%;
+float:left;
+padding:10px;
+color:black;
+display: block;
+border-color:black;
+border-width: 3px;
+border-style: solid;
+}
+.innerblock{
+width:50%;
+display: block;
+margin-left:30px;
+border-style: dotted;
+}
+.heading{
+margin:1px;
+padding:0px;
+border-width: 0px;
+}
+
+.slotsToggle:hover{
+text-decoration: underline;
+cursor:pointer;
+}
+
+.output{
+margin-top:70px;
+}
+
+ .rejectAppointee, .cancelAppointment, .unbooked, .booked, .canbebooked, input[type="submit"], a
+{
+background-color:white; 
+color:black;
+border-style: solid;
+border-color:black;
+border-width: 1px;
+font-family: raleway;
+font-size:14px; 
+padding-left:10px;
+padding-top:5px;
+padding-bottom:5px;
+display:inline-block;
+position:relative;
+margin-left:3px;
+font-family: raleway;
+padding-right:10px; 
+-moz-border-radius:40px 40px 40px 40px;  // rounds corners for firefox
+border-radius:40px 40px 40px 40px;  //rounds corners for other browsers
+}
+.rejectAppointee:hover, .cancelAppointment:hover, .unbooked:hover, .booked:hover, .canbebooked:hover, input[type="submit"]:hover, a:hover
+{
+color:black;
+border-style: dotted;
+border-color:black;
+border-width: 1px;
+background-color:#E6E6B8;
+cursor: pointer;
+}
+ .booked, .booked:hover
+{
+	background-color: red;
+	border-width: 3px;
+}
+ .unbooked, .unbooked:hover, .canbebooked, .canbebooked:hover
+{
+	background-color: green;
+	border-width: 3px;
+}
+input[type="submit"], input[type="submit"]:hover
+{
+	border-width: 2px;
+}
+textarea,input[type="text"],input[type="password"],input[type="number"],input[type="date"] {
+  top:10px;
+  resize: none;
+  background: none;
+  border-color:black;
+  border-width: 2px;
+  border-style: solid;
+}

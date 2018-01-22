@@ -1,0 +1,44 @@
+CREATE TABLE appointee (
+  appointeeID int(11) NOT NULL AUTO_INCREMENT,
+  name varchar(50) NOT NULL,
+  sex char(1) NOT NULL,
+  age int(2) NOT NULL,
+  phone int(10) NOT NULL,
+  email varchar(100) NOT NULL,
+  pwd varchar(8) NOT NULL,
+  PRIMARY KEY (appointeeID)
+);
+
+CREATE TABLE appointer (
+  appointerID int(11) NOT NULL AUTO_INCREMENT,
+  name varchar(50) NOT NULL,
+  phone int(10) NOT NULL,
+  email varchar(100) NOT NULL,
+  pwd varchar(8) NOT NULL,
+  profession varchar(100) NOT NULL,
+  description varchar(100) NOT NULL,
+  PRIMARY KEY (appointerID)
+);
+CREATE TABLE appointments(
+  appointmentID int(11) NOT NULL AUTO_INCREMENT,
+  apterID int(11) NOT NULL,
+  date date NOT NULL,
+  slot_from int(11) NOT NULL,
+  slot_to int(11) NOT NULL,
+  nSlots int(5) NOT NULL,
+  PRIMARY KEY (appointmentID),
+  FOREIGN KEY (apterID) REFERENCES appointer(appointerID)
+);
+
+CREATE TABLE bookings(
+  bookID int(11) NOT NULL AUTO_INCREMENT,
+  apteeID int(11) NOT NULL,
+  aptmentID int(11) NOT NULL,
+  bookDate date NOT NULL,
+  slot_number int(5) NOT NULL,
+  PRIMARY KEY (bookID),
+  FOREIGN KEY (apteeID) REFERENCES appointee(appointeeID),
+  FOREIGN KEY (aptmentID) REFERENCES appointments(appointmentID)
+);
+
+
